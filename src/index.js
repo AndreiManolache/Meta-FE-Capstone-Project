@@ -1,13 +1,44 @@
-import React from 'react';
-import ReactDOM from 'react-dom/client';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDOM from "react-dom/client";
+import App from "./App";
+import reportWebVitals from "./reportWebVitals";
+import { BrowserRouter } from "react-router-dom";
+import { ChakraProvider, extendTheme, withDefaultColorScheme } from "@chakra-ui/react";
+import '@fontsource/markazi-text/400.css';
+import '@fontsource/markazi-text/500.css';
+import '@fontsource/markazi-text/600.css';
+import '@fontsource/markazi-text/700.css';
+import '@fontsource/poppins';
 
-const root = ReactDOM.createRoot(document.getElementById('root'));
+const theme = extendTheme(
+  {
+    fonts: {
+      heading: `'Markazi Text', sans-serif`,
+      body: `'Poppins', sans-serif`
+    },
+    colors: {
+      brand: {
+        primary: "#495e57",
+        secondary: "#f4ce14",
+      }
+    },
+    components: {
+      defaultProps: {
+        colorScheme: "secondary"
+      }
+    }
+  },
+  withDefaultColorScheme({ colorScheme: "colors" })
+)
+
+const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(
   <React.StrictMode>
-    <App />
+    <ChakraProvider theme={theme}>
+      <BrowserRouter>
+        <App />
+      </BrowserRouter>
+    </ChakraProvider>
   </React.StrictMode>
 );
 
