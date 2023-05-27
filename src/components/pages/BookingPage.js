@@ -1,7 +1,8 @@
-import Heading from "../sections/reservePages/Heading";
-import ReservationForm from "../sections/reservePages/BookingForm";
+import ReservationForm from "../sections/BookingForm";
 import { useReducer } from "react";
 import { fetchAPI } from "../../bookingsAPI";
+import ReservationsHero from "../sections/ReservationHero";
+import AboutSection from "../sections/About";
 export default function BookingPage() {
   function updateTimes(date) {
     return fetchAPI(date);
@@ -13,8 +14,9 @@ export default function BookingPage() {
 
   return (
     <>
-      <Heading />
+      <ReservationsHero />
       <ReservationForm availableTimes={availableTimes} updateTimes={dispatch} />
+      <AboutSection />
     </>
   );
 }

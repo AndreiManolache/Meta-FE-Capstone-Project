@@ -25,7 +25,7 @@ export default function Navbar() {
           </Box>
         </Show>
         <Show as="nav" breakpoint='(min-width: 768px)'>
-          <HStack>
+          <HStack spacing={10}>
             <NavigationItems />
           </HStack>
         </Show>

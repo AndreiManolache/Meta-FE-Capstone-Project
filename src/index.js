@@ -20,6 +20,7 @@ const theme = extendTheme(
       brand: {
         primary: "#495e57",
         secondary: "#f4ce14",
+        dark: "#333"
       }
     },
     components: {

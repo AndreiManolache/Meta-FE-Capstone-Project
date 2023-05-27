@@ -1,8 +1,8 @@
-import Heading from "../sections/aboutPages/Heading";
+import AboutSection from "../sections/About"
 export default function About() {
   return (
     <>
-      <Heading />
+      <AboutSection />
     </>
   );
 }

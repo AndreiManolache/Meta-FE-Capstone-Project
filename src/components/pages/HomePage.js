@@ -1,11 +1,11 @@
-import Heading from "../sections/headingPages/Heading";
-import Specials from "../sections/headingPages/Specials";
-import Testimonials from "../sections/headingPages/Testimonials";
-import About from "../sections/headingPages/About";
+import ReservationsHero from "../sections/MainHero";
+import Specials from "../sections/Specials";
+import Testimonials from "../sections/Testimonials";
+import About from "../sections/About";
 export default function Homepage() {
   return (
     <>
-      <Heading />
+      <ReservationsHero />
       <main>
         <Specials />
         <Testimonials />

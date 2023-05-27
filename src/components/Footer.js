@@ -1,13 +1,109 @@
+import { Box, Flex, Heading, Image, Text, VStack } from "@chakra-ui/react";
 import { Link } from "react-router-dom";
 export default function Footer() {
   return (
-    <footer>
-      <menu>
-        <li className="img-footer">
-          <img
-            src={require("../assets/footer-logo.png")}
+    <Box bg="brand.primary">
+      <Flex as="footer" flexWrap="wrap" justifyContent="space-between" maxW="1240px" mx="auto" px={4} py={32} pb={16}>
+      <Box width={{ base: '100%', sm: '50%', md: '25%' }}>
+          <Image
+            src="/assets/footer-logo.png"
             alt="Little Lemon logo"
-          ></img>
+            maxWidth="80px"
+            mt={2}
+          />
+        </Box>
+        <Box width={{ base: '100%', sm: '50%', md: '25%' }}>
+          <Heading fontSize="3xl" fontWeight="medium" mb={2}>Navigation</Heading>
+          <VStack as="ul" spacing={2} alignItems="flex-start">
+            <Link to="/">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Home
+              </Text>
+            </Link>
+            <Link to="/about">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                About
+              </Text>
+            </Link>
+            <a
+              href="/assets/menu.webp"
+              target="_blank"
+              rel="noreferrer"
+            >
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Menu
+              </Text>
+            </a>
+            <Link to="/reservations">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Reservations
+              </Text>
+            </Link>
+            <Link to="/order">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Order
+              </Text>
+            </Link>
+            <Link to="/login">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Login
+              </Text>
+            </Link>
+          </VStack>
+        </Box>
+        <Box width={{ base: '100%', sm: '50%', md: '25%' }}>
+          <Heading fontSize="3xl" fontWeight="medium" mb={2}>Contact</Heading>
+          <VStack as="ul" spacing={3} alignItems="flex-start">
+            <a href="#">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                2395 Maldove Way, <br/> Chicago Illinois
+              </Text>
+            </a>
+            <a href="#">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                (629)-243-6827
+              </Text>
+            </a>
+            <a href="#">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                info@littlelemon.com
+              </Text>
+            </a>
+          </VStack>
+        </Box>
+        <Box width={{ base: '100%', sm: '50%', md: '25%' }}>
+          <Heading fontSize="3xl" fontWeight="medium" mb={2}>Social</Heading>
+          <VStack as="ul" spacing={3} alignItems="flex-start">
+            <a href="#">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Like us on Facebook
+              </Text>
+            </a>
+            <a href="#">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Follow us on instagram
+              </Text>
+            </a>
+            <a href="#">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                Tweet about our food
+              </Text>
+            </a>
+            <a href="#">
+              <Text as="span" color="white" fontSize="md" _hover={{ color: "brand.secondary" }}>
+                TripAdvisor reviews
+              </Text>
+            </a>
+          </VStack>
+        </Box >
+      </Flex>
+      {/* <footer>
+      <menu>
+        <li>
+          <img
+            src="/assets/footer-logo.png"
+            alt="Little Lemon logo"
+          />
         </li>
         <li className="contact">
           <h1 className="footer-header">Navigation</h1>
@@ -71,6 +167,7 @@ export default function Footer() {
           </ul>
         </li>
       </menu>
-    </footer>
+    </footer> */}
+    </Box>
   );
 }
